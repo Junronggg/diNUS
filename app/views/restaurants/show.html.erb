@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @restaurant.name %></title>
+</head>
+<body>
+  <h1><%= @restaurant.name %></h1>
+  <p>Address: <%= @restaurant.address %></p>
+  <p>Cuisine: <%= @restaurant.cuisine %></p>
+  <p>Average Rating: <%= @average_rating %></p>
+
+  <h2>Comments</h2>
+  <ul>
+    <% @restaurant.comments.each do |comment| %>
+      <li>" <%= comment.text %> " commented by <%= comment.user %>, give rating of <%= comment.rating %></li>
+    <% end %>
+  </ul>
+
+  <h2>Add a Comment</h2>
+  <%= form_with(model: [@restaurant, @comment], local: true) do |form| %>
+    <div>
+      <%= form.label :user %>
+      <%= form.text_field :user %>
+    </div>
+    <div>
+      <%= form.label :text %>
+      <%= form.text_area :text %>
+    </div>
+    <div>
+      <%= form.label :rating %>
+      <%= form.number_field :rating %>
+    </div>
+    <div>
+      <%= form.submit "Add Comment" %>
+    </div>
+  <% end %>
+  <%= link_to "Back to Index", root_path %>
+</body>
+</html>

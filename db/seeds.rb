@@ -1,3 +1,4 @@
+
 # Define ingredient categories and their respective items
 ingredients_data = {
   'Vegetable' => ['Tomato', 'Lettuce', 'Cucumber', 'Spinach', 'Carrot', 'Broccoli', 'Mushrooms', 'Bell Pepper', 'Zucchini', 'Onion'],
@@ -54,3 +55,12 @@ dishes.each do |dish_data|
 end
 
 puts "Database seeded with #{Ingredient.count} ingredients and #{Dish.count} dishes!"
+
+Restaurant.create([
+  { name: "Joe's Diner", address: "123 Main St", cuisine: "American", rating: 4 },
+  { name: "Sushi Place", address: "456 Elm St", cuisine: "Japanese", rating: 5 },
+  { name: "Pasta House", address: "789 Oak St", cuisine: "Italian", rating: 3 },
+  { name: "Taco Town", address: "101 Maple St", cuisine: "Mexican", rating: 4 },
+  { name: "Curry Corner", address: "202 Pine St", cuisine: "Indian", rating: 5 }
+])
+
