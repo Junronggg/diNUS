@@ -57,10 +57,10 @@ end
 puts "Database seeded with #{Ingredient.count} ingredients and #{Dish.count} dishes!"
 
 Restaurant.create([
-  { name: "Joe's Diner", address: "123 Main St", cuisine: "American", rating: 4 },
-  { name: "Sushi Place", address: "456 Elm St", cuisine: "Japanese", rating: 5 },
-  { name: "Pasta House", address: "789 Oak St", cuisine: "Italian", rating: 3 },
-  { name: "Taco Town", address: "101 Maple St", cuisine: "Mexican", rating: 4 },
-  { name: "Curry Corner", address: "202 Pine St", cuisine: "Indian", rating: 5 }
+  { name: "Joe's Diner", address: "123 Main St", cuisine: "American" },
+  { name: "Sushi Place", address: "456 Elm St", cuisine: "Japanese" },
+  { name: "Pasta House", address: "789 Oak St", cuisine: "Italian" },
+  { name: "Taco Town", address: "101 Maple St", cuisine: "Mexican" },
+  { name: "Curry Corner", address: "202 Pine St", cuisine: "Indian" }
 ])
 
