@@ -1,0 +1,11 @@
+<div class="generate-dish-container">
+  <h1 class="title">Random Dish Generator</h1>
+  <% if @dish %>
+    <div class="dish-details">
+      <p><strong>Dish Name:</strong> <%= @dish.name %></p>
+      <p><strong>Video:</strong> <a href="<%= @dish.video_url %>" target="_blank">Watch here</a></p>
+    </div>
+  <% else %>
+    <p>No dish available.</p>
+  <% end %>
+</div>
