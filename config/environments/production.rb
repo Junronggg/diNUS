@@ -87,4 +87,8 @@ Rails.application.configure do
   #
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  config.public_file_server.enabled = true
+config.assets.compile = false # Ensure this is set to false to rely on precompiled assets
+config.assets.digest = true
+
 end
