@@ -8,10 +8,12 @@ Rails.application.routes.draw do
       get 'by_ingredients'
       get 'generate_dish'
     end
-  
+  end
   get "restauranthome/index"
   get "home/index"
-  
+  # Define the route for restauranthome#index
+  get 'restauranthome', to: 'restauranthome#index', as: 'restauranthome'
+
   get "up" => "rails/health#show", as: :rails_health_check
 
  
@@ -20,5 +22,6 @@ Rails.application.routes.draw do
   resources :restaurants, only: [:index, :show] do
     resources :comments, only: [:create]
   end
- end
+
+end
 
