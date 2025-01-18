@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'  # Set home page as root
   
   # Cook routes
-  resources :cook, only: [] do
+  resources :cook do
     collection do
       get 'by_ingredients'
       get 'generate_dish'
