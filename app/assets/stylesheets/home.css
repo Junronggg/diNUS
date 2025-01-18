@@ -1,0 +1,106 @@
+/* Make the title larger and center it */
+/* application.css or home.css */
+
+/* Set a background image for the home page */
+body {
+    background-image: url('Techno-Edge.jpg'); /* Replace with your image's URL */
+    background-size: cover; /* Ensures the image covers the whole page */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+    height: 100vh; /* Ensures the background covers the entire viewport height */
+  }
+  
+  /* Alternatively, you can apply it only to a specific container, like home-container */
+  .home-container {
+    background-image: url('Techno-Edge.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Center vertically */
+    align-items: center;      /* Center horizontally */
+    height: 100vh;            /* Full viewport height */
+    text-align: center;       /* Ensure text is centered */
+  }
+  
+  h1.title {
+    font-size: 6em;  /* Make the title larger */
+    font-weight: bold;
+  }
+
+  h1.title span.cook {
+    color: #FF6A13; /* PMS 152 Orange */
+  }
+  
+  /* Style the 'di' and 'NUS' with specific colors */
+  h1.title span.di {
+    color: #FF6A13; /* PMS 152 Orange */
+  }
+  
+  h1.title span.nus {
+    color: #003D73; /* PMS 294 Blue */
+  }
+  
+ 
+    /* Buttons styling */
+    .btn {
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        color: white;
+    }
+    
+  /* Left button (blue) */
+  .btn-left {
+    background-color: #003D73; /* Blue background */
+    color: white; /* White text */
+  }
+  
+  /* Right button (orange) */
+  .btn-right {
+    background-color: #FF6A13; /* Orange background */
+    color: white; /* White text */
+  }
+  
+  /* Hover effect for buttons */
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Center the buttons horizontally with space between them */
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .btn-home {
+    background-color: #003D73;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 200px;  /* Make it wider */
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+  }
+  .center-button {
+    display: block;
+    width: 200px;
+    margin: 40px auto;
+  }

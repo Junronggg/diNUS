@@ -1,16 +1,26 @@
 <div class="generate-dish-container">
-  <h1 class="title">Random Dish Generator</h1>
-  <% if @dish %>
-    <div class="dish-details">
-      <p><strong>Dish Name:</strong> <%= @dish.name %></p>
-      <p><strong>Video:</strong> <a href="<%= @dish.video_url %>" target="_blank">Watch here</a></p>
-    </div>
-  <% else %>
-    <p>No dish available.</p>
+  <% content_for :stylesheets do %>
+    <%= stylesheet_link_tag 'generate_dish' %>
   <% end %>
 
-  <!-- Back to Home button -->
-      <div class="form-actions">
-        <%= link_to 'Back to Home', cook_index_path, class: 'btn btn-primary' %>
-      </div>
+  <!-- Title -->
+  <h1 class="title">Random Dish Generator</h1>
+
+  <!-- Dish Name and Watch Video -->
+  <div class="dish-info">
+    <h2 class="dish-name"><%= @dish.name %></h2>
+    <p class="watch-video">
+      <%= link_to 'Watch Video', @dish.video_url, class: 'btn btn-link', target: '_blank' %>
+    </p>
+  </div>
+
+  <!-- Generate Again Button -->
+  <div class="generate-again">
+    <%= link_to 'Generate Again!', generate_dish_cook_index_path, class: 'btn btn-primary' %>
+  </div>
+
+  <!-- Back to Home Button -->
+  <div class="back-home">
+    <%= link_to 'Back to Home', cook_index_path, class: 'btn btn-primary' %>
+  </div>
 </div>
