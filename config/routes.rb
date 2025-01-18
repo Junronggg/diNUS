@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "restauranthome/index"
   get "home/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  root "home#index"
+  root "restauranthome#index"
 
   resources :restaurants, only: [:index, :show] do
     resources :comments, only: [:create]

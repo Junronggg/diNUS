@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class RestauranthomeController < ApplicationController
   def index
     @restaurants = Restaurant.all
   end
