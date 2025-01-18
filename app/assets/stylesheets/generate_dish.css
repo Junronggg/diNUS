@@ -1,0 +1,73 @@
+/* Center container layout */
+.generate-dish-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center;     /* Center horizontally */
+    height: 100vh;           /* Full viewport height */
+    text-align: center;      /* Center text */
+  }
+  
+  /* Title styles */
+  h1.title {
+    color: #FF6A13; /* Orange color */
+    font-size: 4em; /* Large text size */
+    font-weight: bold;
+    margin-bottom: 40px; /* Add spacing below title */
+  }
+  
+  /* Dish Name and Watch Video styles */
+  .dish-info {
+    margin-bottom: 40px; /* Add spacing below dish info */
+  }
+  
+  .dish-name {
+    color: #003D73; /* Blue color */
+    font-size: 2em; /* Medium-large text size */
+    font-weight: bold;
+    margin-bottom: 20px; /* Add spacing below name */
+  }
+  
+  .watch-video .btn-link {
+    color: #003D73; /* Blue color */
+    font-size: 1.5em; /* Medium text size */
+    text-decoration: underline; /* Underline the link */
+    font-weight: bold;
+  }
+  
+  /* Back to Home Button styles */
+  .back-home {
+    margin-top: 40px; /* Add more space above the button */
+  }
+  
+  .back-home .btn-primary {
+    background-color: #003D73; /* Blue background */
+    color: white;             /* White text */
+    padding: 10px 20px;       /* Add padding */
+    border-radius: 5px;       /* Rounded corners */
+    font-size: 1.2rem;        /* Adjust font size */
+    text-decoration: none;    /* Remove underline */
+    display: inline-block;    /* Ensure it displays as a button */
+    transition: background-color 0.3s ease; /* Add hover effect */
+  }
+  
+  .back-home .btn-primary:hover {
+    background-color: #002952; /* Darker blue on hover */
+  }
+
+  .generate-again .btn-primary {
+    background-color: #003D73; /* Blue background */
+    color: white;             /* White text */
+    padding: 10px 20px;       /* Add padding */
+    border-radius: 5px;       /* Rounded corners */
+    font-size: 1.2rem;        /* Adjust font size */
+    text-decoration: none;    /* Remove underline */
+    margin: 20px 0;           /* Add spacing above and below button */
+    display: inline-block;    /* Ensure it displays as a button */
+    transition: background-color 0.3s ease; /* Add hover effect */
+  }
+  
+  .generate-again .btn-primary:hover {
+    background-color: #002952; /* Darker blue on hover */
+  }
+  

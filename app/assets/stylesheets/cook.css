@@ -1,0 +1,63 @@
+/* General container styles */
+.cook-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center text alignment */
+    background-color: #f7f7f7; /* Optional light background color */
+  }
+  
+  /* Title styles */
+  h1.title {
+    font-size: 4em; /* Large font size */
+    font-weight: bold; /* Bold text */
+    color: #FF6A13; /* Orange color for the title */
+    margin-bottom: 40px; /* Space below the title */
+  }
+  
+  /* Button styles */
+  .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Orange button (left) */
+  .btn-orange {
+    background-color: #FF6A13; /* Orange color */
+  }
+  
+  .btn-orange:hover {
+    background-color: #E85C12; /* Darker orange on hover */
+  }
+  
+  /* Blue button (right and back to home) */
+  .btn-blue {
+    background-color: #003D73; /* Blue color */
+  }
+  
+  .btn-blue:hover {
+    background-color: #002A57; /* Darker blue on hover */
+  }
+  
+  /* Button container */
+  .buttons {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Space between buttons */
+    margin-bottom: 40px; /* Space below the button group */
+  }
+  
+  /* Back to Home button */
+  .back-home {
+    margin-top: 20px; /* Space above the Back to Home button */
+  }
+  

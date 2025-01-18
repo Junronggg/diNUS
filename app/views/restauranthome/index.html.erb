@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Restaurant App</title>
-
+  <title>Restaurant Experience</title>
+  <%= stylesheet_link_tag 'restauranthome' %>
 </head>
 <body>
-<h1>Restaurant App</h1>
-<ul>
-<% @restaurants.each do |restaurant| %>
-  <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
-  <% end %>
-</ul>
-
+  <h1 class="title">Restaurant Experience</h1>
+  
+  <div class="restaurant-buttons">
+    <% @restaurants.each do |restaurant| %>
+      <%= link_to restaurant.name, restaurant_path(restaurant), class: 'btn btn-orange' %>
+    <% end %>
+  </div>
 </body>
 </html>

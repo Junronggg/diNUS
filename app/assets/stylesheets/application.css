@@ -1,50 +1,36 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-  
-  .title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 2rem 0;
-    color: #333;
-  }
-  
-  .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .btn {
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Specific styling for ingredients grid */
-  .ingredients-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    justify-items: center;
-  }
-  
-  .ingredient {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
+/* application.css */
+
+/* Apply white title with shades */
+.title {
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for a shaded effect */
+  text-align: center; /* Center the title */
+  font-size: 3rem; /* Adjust size as needed */
+  margin-top: 50px; /* Add some space at the top */
+}
+
+/* Style the buttons (blue background with white text) */
+.btn {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* Remove the border */
+  padding: 10px 20px; /* Add some padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1.1rem; /* Adjust font size */
+  text-align: center;
+  text-decoration: none; /* Remove underline from links */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a transition effect */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Center the buttons horizontally */
+.buttons {
+  display: flex;
+  justify-content: center; /* Center buttons horizontally */
+  gap: 20px; /* Add some space between buttons */
+  margin-top: 30px; /* Add some space above the buttons */
+}

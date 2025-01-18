@@ -1,116 +1,140 @@
 /* Container styling */
 .ingredients-container {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f9f9f9;
-    min-height: 100vh;
-  }
-  
-  /* Title styling */
-  .title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  /* Ingredient Category */
-  .ingredient-category {
-    margin-bottom: 2rem;
-  }
-  
-  .ingredient-category h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  /* Grid styling for ingredients */
-  .ingredients-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 ingredients per row */
-    gap: 1rem;
-    width: 100%;
-    max-width: 900px;
-    justify-items: center;
-  }
-  
-  /* Ingredient button styling */
-  .ingredient {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 0.5rem;
-    font-size: 1rem;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .ingredient input[type="checkbox"] {
-    margin-right: 0.5rem;
-  }
-  
-  /* Styling for different categories */
-  .vegetable {
-    background-color: lightgreen;
-  }
-  
-  .vegetable input[type="checkbox"]:checked + label {
-    background-color: green;
-    color: white;
-  }
-  
-  .meat {
-    background-color: lightcoral;
-  }
-  
-  .meat input[type="checkbox"]:checked + label {
-    background-color: red;
-    color: white;
-  }
-  
-  .sauce {
-    background-color: lightyellow;
-  }
-  
-  .sauce input[type="checkbox"]:checked + label {
-    background-color: yellow;
-    color: black;
-  }
-  
-  .other {
-    background-color: lightgray;
-  }
-  
-  .other input[type="checkbox"]:checked + label {
-    background-color: gray;
-    color: white;
-  }
-  
-  /* Button styling */
-  .form-actions {
-    margin-top: 2rem;
-    text-align: center;
-  }
-  
-  .form-actions .btn {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .form-actions .btn:hover {
-    background-color: #0056b3;
-  }
-  
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* Title styling */
+.title {
+  font-size: 4rem; /* Large font size */
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #FF6A13; /* Orange */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+/* Ingredient Category */
+.ingredient-category {
+  margin-bottom: 2rem;
+}
+
+.ingredient-category h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #003D73; /* Blue */
+}
+
+/* Grid styling for ingredients */
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 10 buttons per row */
+  gap: 0.5rem; /* Smaller spacing between buttons */
+  width: 100%;
+  max-width: 1200px; /* Adjust max width */
+  justify-items: center; /* Ensure the buttons are centered */
+  margin: 0 auto; /* Center the grid container */
+}
+
+/* Ingredient button styling */
+.ingredient {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.3rem; /* Smaller padding */
+  font-size: 0.9rem; /* Smaller font size */
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100px; /* Uniform button width */
+  height: 30px; /* Uniform button height */
+  position: relative;
+  background-color: white; /* Default background color */
+}
+
+.ingredient input[type="checkbox"] {
+  position: absolute;
+  opacity: 0; /* Hide the checkbox */
+}
+
+.ingredient label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Styling for different categories */
+.vegetable {
+  background-color: lightgreen;
+}
+
+.vegetable input[type="checkbox"]:checked + label {
+  background-color: green;
+  color: white;
+}
+
+.meat {
+  background-color: lightcoral;
+}
+
+.meat input[type="checkbox"]:checked + label {
+  background-color: red;
+  color: white;
+}
+
+.sauce {
+  background-color: lightyellow;
+}
+
+.sauce input[type="checkbox"]:checked + label {
+  background-color: yellow;
+  color: black;
+}
+
+.other {
+  background-color: lightgray;
+}
+
+.other input[type="checkbox"]:checked + label {
+  background-color: gray;
+  color: white;
+}
+
+
+/* Find Dishes Button */
+.find-dishes-btn,
+.back-home {
+  background-color: #003D73; /* Blue background */
+  color: white;
+  padding: 0.5rem 1.5rem; /* Smaller padding */
+  border-radius: 5px;
+  font-size: 1rem; /* Smaller font size */
+  cursor: pointer;
+  text-decoration: none;
+  margin: 1.5rem 0;
+  display: inline-block;
+  border: none; /* No border */
+}
+
+/* Dishes Found Section */
+.dishes-found {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #003D73; /* Blue for the text */
+}
+
+
+
+

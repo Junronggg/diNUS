@@ -1,91 +1,93 @@
 <%= form_with url: by_ingredients_cook_index_path, method: :get do |form| %>
-    <div class="ingredients-container">
-      <!-- Title -->
-      <h1 class="title">Find Dishes by Ingredients</h1>
-  
-      <!-- Vegetables Section -->
-      <div class="ingredient-category">
-        <h2>Choose Vegetables</h2>
-        <div class="ingredients-grid">
-          <% @ingredients.each do |ingredient| %>
-            <% if ingredient.category == 'Vegetable' %>
-              <div class="ingredient vegetable">
-                <%= form.check_box :ingredients, { multiple: true, include_hidden: false }, ingredient.name, nil %>
-                <%= form.label :ingredients, ingredient.name, value: ingredient.name %>
-              </div>
-            <% end %>
+  <div class="ingredients-container">
+    <% content_for :stylesheets do %>
+      <%= stylesheet_link_tag 'by_ingredients' %>
+    <% end %>
+    <!-- Title -->
+    <h1 class="title">Find Dishes by Ingredients</h1>
+
+    <!-- Ingredient Sections -->
+    <div class="ingredient-category">
+      <h2>Choose Vegetables</h2>
+      <div class="ingredients-grid">
+        <% @ingredients.each do |ingredient| %>
+          <% if ingredient.category == 'Vegetable' %>
+            <div class="ingredient vegetable">
+              <%= form.check_box :ingredients, { multiple: true, include_hidden: false }, ingredient.name, nil %>
+              <%= form.label :ingredients, ingredient.name, value: ingredient.name %>
+            </div>
           <% end %>
-        </div>
+        <% end %>
       </div>
-  
-      <!-- Meats Section -->
-      <div class="ingredient-category">
-        <h2>Choose Meats</h2>
-        <div class="ingredients-grid">
-          <% @ingredients.each do |ingredient| %>
-            <% if ingredient.category == 'Meat' %>
-              <div class="ingredient meat">
-                <%= form.check_box :ingredients, { multiple: true, include_hidden: false }, ingredient.name, nil %>
-                <%= form.label :ingredients, ingredient.name, value: ingredient.name %>
-              </div>
-            <% end %>
+    </div>
+
+    <div class="ingredient-category">
+      <h2>Choose Meats</h2>
+      <div class="ingredients-grid">
+        <% @ingredients.each do |ingredient| %>
+          <% if ingredient.category == 'Meat' %>
+            <div class="ingredient meat">
+              <%= form.check_box :ingredients, { multiple: true, include_hidden: false }, ingredient.name, nil %>
+              <%= form.label :ingredients, ingredient.name, value: ingredient.name %>
+            </div>
           <% end %>
-        </div>
+        <% end %>
       </div>
-  
-      <!-- Sauces Section -->
-      <div class="ingredient-category">
-        <h2>Choose Sauces</h2>
-        <div class="ingredients-grid">
-          <% @ingredients.each do |ingredient| %>
-            <% if ingredient.category == 'Sauce' %>
-              <div class="ingredient sauce">
-                <%= form.check_box :ingredients, { multiple: true, include_hidden: false }, ingredient.name, nil %>
-                <%= form.label :ingredients, ingredient.name, value: ingredient.name %>
-              </div>
-            <% end %>
+    </div>
+
+    <div class="ingredient-category">
+      <h2>Choose Sauces</h2>
+      <div class="ingredients-grid">
+        <% @ingredients.each do |ingredient| %>
+          <% if ingredient.category == 'Sauce' %>
+            <div class="ingredient sauce">
+              <%= form.check_box :ingredients, { multiple: true, include_hidden: false }, ingredient.name, nil %>
+              <%= form.label :ingredients, ingredient.name, value: ingredient.name %>
+            </div>
           <% end %>
-        </div>
+        <% end %>
       </div>
-  
-      <!-- Other Ingredients Section -->
-      <div class="ingredient-category">
-        <h2>Choose Other Ingredients</h2>
-        <div class="ingredients-grid">
-          <% @ingredients.each do |ingredient| %>
-            <% if ingredient.category == 'Other' %>
-              <div class="ingredient other">
-                <%= form.check_box :ingredients, { multiple: true, include_hidden: false }, ingredient.name, nil %>
-                <%= form.label :ingredients, ingredient.name, value: ingredient.name %>
-              </div>
-            <% end %>
+    </div>
+
+    <div class="ingredient-category">
+      <h2>Choose Other Ingredients</h2>
+      <div class="ingredients-grid">
+        <% @ingredients.each do |ingredient| %>
+          <% if ingredient.category == 'Other' %>
+            <div class="ingredient other">
+              <%= form.check_box :ingredients, { multiple: true, include_hidden: false }, ingredient.name, nil %>
+              <%= form.label :ingredients, ingredient.name, value: ingredient.name %>
+            </div>
           <% end %>
-        </div>
+        <% end %>
       </div>
-  
-      <!-- Submit Button -->
-      <div class="form-actions">
-        <%= form.submit 'Find Dishes', class: 'btn btn-primary' %>
-      </div>
-  
-      <% if @dishes.present? %>
-        <div class="dishes-list">
-          <h3>Found Dishes</h3>
+    </div>
+
+    <!-- Find Dishes Button -->
+    <div class="form-actions">
+      <%= form.submit 'Find Dishes', class: 'find-dishes-btn' %>
+    </div>
+
+    <!-- Dishes Found Section -->
+    <% if @dishes.present? %>
+      <div class="dishes-found">
+        <h3>Dishes Found</h3>
+        <div class="dishes-grid">
           <% @dishes.each do |dish| %>
-            <div class="dish">
+            <div class="dish-item">
               <h4><%= dish.name %></h4>
               <%= link_to 'Watch Video', dish.video_url, target: '_blank' %>
             </div>
           <% end %>
         </div>
-      <% else %>
-        <p>No dishes found based on your selected ingredients.</p>
-      <% end %>
-  
-      <!-- Back to Home button -->
-      <div class="form-actions">
-        <%= link_to 'Back to Home', cook_index_path, class: 'btn btn-primary' %>
       </div>
+    <% else %>
+      <p>No dishes found based on your selected ingredients.</p>
+    <% end %>
+
+    <!-- Back to Home Button -->
+    <div class="form-actions">
+      <%= link_to 'Back to Home', cook_index_path, class: 'back-home' %>
     </div>
-  <% end %>
-  
+  </div>
+<% end %>
