@@ -5,21 +5,18 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: ruby 3.4.1 
 
-* System dependencies
+* System dependencies: Linux or MacOs
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Deployment instructions:
+step 1: download RoR: https://guides.rubyonrails.org/install_ruby_on_rails.html
+step 2: check if you have rails on your local: open rails, $ rails --version
+step 3：```git clone <ssh>```
+step 4: ```cd to directory```
+step 5: ```rails db:seed```
+step 6: ```rails db:migrate```
+finally, ```rails server```, open http://localhost:3000/
 
 * ...
 
